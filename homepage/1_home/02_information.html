@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HWANGJUHEE'S INFORMATION</title>
+    <link href="../2_resources/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Stalinist+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="info">
+        <header class="headcategory">
+            <nav>
+                <ul class="category">
+                    <li><a class="button1" href="01_main.html">HOME</a></li>
+                    <li><a class="button2" href="02_information.html">INFO</a></li>
+                    <li><a class="button3" href="03_skill.html">SKILL</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>INFORMATION</h1>
+    </div>
+
+    <div class="info2">
+        <pre>
+
+            안녕하세요. 아직 배워나가는 단계인 감자 중의 감자입니다.
+            아직도, 여전히, 코드와 사이가 안좋지만
+            하루 빨리 익숙해지고 능숙해지는 날이 왔으면 좋겠습니다.
+        </pre>
+    </div>
+
+    <table class="tinfo">
+        <tr>
+            <th>황주희</th>
+            <th>school</th>
+            <th>license</th>
+        <tr>
+            <th>010-1234-5678</th>
+            <th> pizza school </th>
+            <th>피자 맛집 탐방</th>
+        </tr>
+        <tr>
+            <th>abcdefg@gmail.com</th>
+            <th> waffle univ </th>><th>와플 조합 잘알</th>
+        </tr>
+    </table>
+
+    <div class="profile">
+        <img src="../2_resources/image/profile.png">
+    </div>
+
+    <a href="https://ctmeou.tistory.com">
+        <img class="blog" src="../2_resources/image/tistory.png">
+    </a>
+
+    <a href="https://github.com/ctmeou">
+        <img class="git" src="../2_resources/image/GitHub.png">
+    </a>
+
+    <a href="https://ctmeou.tistory.com/guestbook">
+        <img class="guest" src="../2_resources/image/gestbook.png">
+    </a>
+
+  
+
+    <div class="backSky">
+        <svg class="sky"></svg>
+    </div>
+
+    <script>
+        const $sky = document.querySelector(".sky");
+
+        // 브라우저 창 크기에 따른 별 생성
+        window.onresize = () => {
+            makeStars();
+        }
+
+        const makeStars = () => {
+            // 브라우저 가장 큰 크기
+            const maxSize = Math.max(window.innerWidth, window.innerHeight)
+
+            // 랜덤한 X 위치 값
+            const getRandomX = () => Math.random() * maxSize;
+
+            // 랜덤한 Y 위치 값
+            const getRandomY = () => Math.random() * maxSize;
+
+            // 랜덤한 크기 (circle는 반지름이 크기)
+            const randomRadius = () => Math.random() * 0.7 + 0.6;
+
+            // 임의의 값
+            const _size = Math.floor(maxSize / 2);
+
+            const htmlDummy = new Array(_size).fill().map((_, i) => {
+                return `<circle class='star'
+                cx=${getRandomX()}
+                cy=${getRandomY()}
+                r=${randomRadius()}
+                className="star" />`
+            }).join('');
+
+            $sky.innerHTML = htmlDummy;
+        }
+
+        window.onload = () => {
+            makeStars();
+        }
+    </script>
+
+    <footer>
+        <div class="footername">
+            <p>HwangJuhee’s portfolo</p>
+        </div>
+    </footer>
+</body>
+
+</html>

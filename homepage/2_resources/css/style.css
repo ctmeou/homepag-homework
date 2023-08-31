@@ -1,0 +1,225 @@
+/* 전체 글씨체 적용 */
+* {
+    font-family: 'Stalinist One', cursive;
+}
+
+.title {
+    display: flex;
+    padding-top: 100px;    
+}
+
+/* main 제목 */
+.clickarea {
+    font-size: 55px;
+    padding: 80px;
+    color: white;
+    position: relative;
+    animation: blink-effect 1s step-end infinite;
+    display: inline-block;
+    text-decoration: none;
+    pointer-events: auto;
+    left: 50px;
+}
+
+/* main 제목 깜빡임 */
+@keyframes blink-effect {
+    50% {
+        opacity: 0;
+    }
+}
+
+.button1, .button2, .button3 {
+    text-decoration-line: none;
+    color: gainsboro;
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 1px white;
+    padding: 15px;
+    border-radius: 24px;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    z-index: 2;
+    /* 버튼을 배경 위로 올리기 */
+    position: relative;
+    /* 버튼의 위치 설정을 위해 추가 */
+}
+
+.button1:hover, .button2:hover, .button3:hover {
+    background-color: rgba(234, 223, 194, 0.525);
+    transition: 0.7s;
+}
+
+/* information 제목 */
+h1 {
+    font-size: 3rem;
+    padding-top: 1%;
+    color: #CC5DD6;
+    text-align: center;
+}
+
+/* information 프로필 사진 크기 */
+.profile img {
+    width: 20%;
+}
+
+.profile {
+    position: absolute;
+    left: 1000px;
+    top: 250px;
+    width: 90%;
+}
+
+.info2 {
+    border: 0.1px solid #000;
+    max-width: 100%;
+    width: auto;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 150px;
+    padding: 20px;
+    border-color: rgba(252, 220, 220, 1%);
+    background-color: rgba(252, 220, 220, 26%);
+    color: white;
+}
+
+/* 배경 */
+body {
+    background-color: black;
+}
+
+/* 별을 감싼 부모 */
+.sky {
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveStar 240s linear infinite;
+    z-index: 1;
+    /* 배경을 버튼 아래로 위치시킴 */
+}
+
+/* 별 */
+.sky .star {
+    fill: goldenrod;
+    stroke: none;
+    stroke-width: 0;
+}
+
+/* 별 이동 효과 */
+@keyframes moveStar {
+    from {
+        transform: translate(-50%, -50%) rotate(0)
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(300deg)
+    }
+}
+
+.headname {
+    color: white;
+    padding: 20px 60px;
+    left: 500px;
+}
+
+.footername {
+    position: fixed;
+    bottom: 0;
+    left: 1110px;
+    display: flex;
+}
+
+.footername p {
+    color: white;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.headcategory {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headcategory li {
+    margin-left: 36px;
+    margin-top: 20px;
+}
+
+.info2 {
+    width: 558px;
+    height: 150px;
+    border: 0.5px solid rgba(174, 40, 91, 0.4);
+    border-radius: 4em;
+    margin-left: 182px;
+    background-color: rgba(248, 223, 223, 0.13);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.tinfo {
+    width: 600px;
+    height: 150px;
+    border: 0.5px solid rgb(174, 40, 91, 0.4);
+    border-radius: 6em;
+    margin-left: 182px;
+    font-family: 'Noto Sans KR', sans-serif ! Important ;
+}
+
+table {
+    margin-top: 0px;
+    margin-left: 150px;
+    padding: 80px;
+    background-color: rgba(248, 223, 223, 0.13);
+    color: white;
+    font-size: 0.7rem;
+    font-family: 'Noto Sans KR', sans-serif ! Important ;
+}
+
+.blog {
+    z-index: 10;
+    pointer-events: auto;
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    right: 353px;
+    bottom: 200px;
+}
+
+.git {
+    z-index: 9;
+    pointer-events: auto;
+    position: absolute;
+    right: 410px;
+    bottom: 186px;
+    width: 64px;
+    height: 64px;
+}
+
+.backSky, .sky {
+    pointer-events: none;
+}
+
+.guest {
+    z-index: 8;
+    pointer-events: auto;
+    position: absolute;
+    right: 270px;
+    bottom: 186px;
+    width: 64px;
+    height: 64px;
+}
+
+.pei {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.pei img {
+    margin: 10px;
+}
